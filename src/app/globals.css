@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Anek+Devanagari:wght@100..800&family=Carme&family=Comfortaa:wght@300..700&family=Maven+Pro:wght@400..900&family=New+Amsterdam&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Prompt:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+body::-webkit-scrollbar{
+  display: none;
+}
+:root{
+   --color:linear-gradient( rgb(162 28 175), rgb(191 219 254));
+}
+.custom{
+  background:linear-gradient(45deg, rgba(0,0,0,.8),rgba(0,0,0,.6)),url(/assets/Rectangle1.png);
+  background-size: cover;
+}
+.bgcustom{
+  background: #00000041;
+  backdrop-filter: blur(30px);
+  box-shadow: 0px 0px 30px rgba(277,228,237,0.37);
+}
+.img{
+  aspect-ratio: 3/2;
+  object-fit: contain;
+}
+.box{
+
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+}
+.box:hover{
+  background: linear-gradient(#e0aaff,#9fa0ff);
+ 
+}
+
+.oth{
+  background: linear-gradient(45deg, rgba(0,0,0,.5),rgba(0,0,0,.6)),url(/assets/bg.webp);
+  background-position:bottom;
+}
+.fot{
+  background: #0000002c;
+  backdrop-filter: blur(30px);
+}
+
+svg text {
+  stroke-width: 2;
+}
+svg text.text-body{
+ stroke:url(#gr-simple);
+ fill:url(#gr-simple);
+  animation:  5s linear animi;
+}
+@keyframes animi{
+  0%{
+    fill: transparent;
+    stroke: aqua;
+    stroke-width: 3;
+    stroke-dashoffset: 25%;
+    stroke-dasharray: 0 32%;
+  }
+  50%,70%{
+    fill: transparent;
+    stroke: aqua;
+    stroke-width: 3;
+  }
+  80%,100%{
+    fill: url(#gr-simple);
+    stroke: transparent;
+    stroke-width: 0;
+    stroke-dashoffset: -25%;
+    stroke-dasharray: 32% 0;
+  }
+}
